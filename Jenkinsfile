@@ -24,14 +24,14 @@ pipeline {
       stage('Build Docker Image') {
             steps {
                 // Build and tag Docker image
-                sh 'docker build -t spring-boot-docker:latest .'
+                sh 'wsl docker build -t spring-boot-docker:latest .'
             }
         }
         
         stage('Deploy Docker Container') {
             steps {
                 // Run Docker container
-                sh 'docker run -d -p 8080:8080 spring-boot-docker:latest'
+                sh 'wsl docker run -d -p 8080:8080 spring-boot-docker:latest'
             }
         }
     }
