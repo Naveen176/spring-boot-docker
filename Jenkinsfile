@@ -15,18 +15,7 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-      stage('Build Docker Image') {
-            steps {
-                // Build and tag Docker image
-                sh 'wsl docker build -t spring-boot-docker:latest .'
-            }
-        }
+
         
-        stage('Deploy Docker Container') {
-            steps {
-                // Run Docker container
-                sh 'wsl docker run -d -p 8080:8080 spring-boot-docker:latest'
-            }
-        }
     }
 }
