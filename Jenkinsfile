@@ -15,12 +15,6 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-        
-        stage('Test') {
-            steps {
-                bat 'mvn test'
-            }
-        }
       stage('Build Docker Image') {
             steps {
                 // Build and tag Docker image
