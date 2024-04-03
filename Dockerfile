@@ -9,7 +9,7 @@ WORKDIR /app
 COPY target/spring-boot-docker.jar app.jar
 
 # Expose the port that the Spring Boot application will run on
-EXPOSE 8080
+EXPOSE 8082
 
 # Run the Spring Boot application when the container starts
 CMD ["java", "-jar", "app.jar"]
